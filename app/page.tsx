@@ -72,3 +72,12 @@
 //     </div>
 //   );
 // }
+import React from "react"
+
+
+export default function Home() {
+
+    <>
+    <h1 className="text-red-500 ">Rangga</h1>
+    </>
+}

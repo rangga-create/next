@@ -4,6 +4,7 @@ import "./globals.css";
 
 import ContextProvider from "./component/Context";
 import AppTheme from "./component/AppTheme";
+import ReactQuery from "./component/reactQuery";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,14 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-
-        <ContextProvider>
-           {children}
-        </ContextProvider>
-       
-    
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <ReactQuery>
+          <ContextProvider>{children}</ContextProvider>
+        </ReactQuery>
+        
       </body>
-    </html>
+    </html> 
   );
 }
